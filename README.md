@@ -1,7 +1,7 @@
 # Task Tracker
 ## MERN stack web app
 
-- ✨ ✨
+React, Redux-toolkit, Html/css/Bootstrap, Node/Express, jwt, Mongoose 
 
 ## Features
 
