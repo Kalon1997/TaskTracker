@@ -8,6 +8,7 @@ import TasksPage from './components/Tasks/TasksPage';
 import OpenTaskPage from './components/Tasks/OpenTaskPage';
 import Navbar from './components/Tasks/Navbar';
 import Profile from './components/Auth/Profile';
+import ErrorPage from './components/ui/ErrorPage';
 
 
 function App() {
@@ -31,6 +32,11 @@ function App() {
 
         <Route exact path='/openProfile/:id'>
             <Profile />  
+        </Route> 
+
+
+        <Route exact path='*'>
+            <ErrorPage />  
         </Route> 
       </Switch>
     </BrowserRouter>

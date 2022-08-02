@@ -8,7 +8,9 @@ const routess = require('./routes/Routess.js')
 const cors = require('cors')
 const connection = require('./middleware/Db.js')
 connection()
-
+if (process.env.NODE_ENV !== "production") {
+    require("dotenv").config({ path: __dirname +  "server/config/config.env" });
+  }
 const corsConfig = {
     credentials: true,
     origin: true,
@@ -23,6 +25,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/api/v1',routess);
 
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.join(__dirname, "../client/build")));
+    app.get("*", (req, res) => {
+      res.sendFile(path.resolve(__dirname, "../client/build/index.html"));
+    });
+  }
 
 app.listen(5000, () => {
     console.log(`listening @ ${process.env.PORT}`)
