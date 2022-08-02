@@ -1,0 +1,35 @@
+.form{
+    width: auto;
+    height: auto;
+    margin: 2rem;
+    padding: 1rem;
+}
+
+.input{
+    width: auto;
+    height: auto;
+    margin: 1rem;
+    padding: 1rem;
+    border: solid black 1px;
+    border-radius: 3rem;
+}
+.submitbtn{
+    width: auto;
+    height: 5rem;
+    margin: 1rem;
+    padding: 1rem;
+    border: solid white 3px;
+    border-radius: 3rem;
+    background-color: slateblue;
+    color: white;
+    font-size: 2rem;
+}
+.submitbtn:hover{
+    cursor: pointer;
+    transform: translateY(-10px);
+}
+
+.submitbtn:active{
+    cursor: pointer;
+    background-color: rgb(66, 44, 209);
+}
